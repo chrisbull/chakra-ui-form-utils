@@ -21,7 +21,19 @@
       "react-chakra-ui-form-hook-generator": [
         "packages/react-chakra-ui-form-hook-generator/src/index.ts"
       ]
-    }
+    },
+    // testing these
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": true
   },
   "exclude": ["node_modules", "tmp"]
 }
