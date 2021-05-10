@@ -1,31 +1,28 @@
 {
   "npmScope": "chakra-ui-form-utils",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     ".eslintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "YjNkMDUxODMtYTAxZC00YTFkLWE4NGQtYTExYzYyYWVkZDQwfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
-  "projects": {},
-  "workspaceLayout": {
-    "appsDir": "packages",
-    "libsDir": "packages"
-  }
+  "projects": {
+    "react-chakra-ui-datepicker": {
+      "tags": ["chakra-ui", "date picker", "react"]
+    },
+    "react-chakra-ui-form-hook-generator": {
+      "tags": ["chakra-ui", "react-hook-form", "react forms"]
+    }
+  },
+  "workspaceLayout": { "appsDir": "packages", "libsDir": "packages" }
 }

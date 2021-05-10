@@ -1,10 +1,70 @@
 {
-  
-  
   "version": 2,
-  
-  "projects": {},
-  "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+  "projects": {
+    "react-chakra-ui-datepicker": {
+      "root": "packages/react-chakra-ui-datepicker",
+      "sourceRoot": "packages/react-chakra-ui-datepicker/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/react-chakra-ui-datepicker",
+            "main": "packages/react-chakra-ui-datepicker/src/index.ts",
+            "tsConfig": "packages/react-chakra-ui-datepicker/tsconfig.lib.json",
+            "assets": ["packages/react-chakra-ui-datepicker/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["packages/react-chakra-ui-datepicker/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/react-chakra-ui-datepicker"],
+          "options": {
+            "jestConfig": "packages/react-chakra-ui-datepicker/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "react-chakra-ui-form-hook-generator": {
+      "root": "packages/react-chakra-ui-form-hook-generator",
+      "sourceRoot": "packages/react-chakra-ui-form-hook-generator/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/react-chakra-ui-form-hook-generator",
+            "main": "packages/react-chakra-ui-form-hook-generator/src/index.ts",
+            "tsConfig": "packages/react-chakra-ui-form-hook-generator/tsconfig.lib.json",
+            "assets": ["packages/react-chakra-ui-form-hook-generator/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "packages/react-chakra-ui-form-hook-generator/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/packages/react-chakra-ui-form-hook-generator"],
+          "options": {
+            "jestConfig": "packages/react-chakra-ui-form-hook-generator/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": { "defaultCollection": "@nrwl/workspace" }
 }
