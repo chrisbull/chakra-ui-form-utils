@@ -29,6 +29,29 @@
             "jestConfig": "packages/react-chakra-ui-datepicker/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "packages/react-chakra-ui-datepicker/.storybook"
+            }
+          },
+          "configurations": { "ci": { "quiet": true } }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/react-chakra-ui-datepicker",
+            "config": {
+              "configFolder": "packages/react-chakra-ui-datepicker/.storybook"
+            }
+          },
+          "configurations": { "ci": { "quiet": true } }
         }
       }
     },
@@ -61,6 +84,85 @@
           "options": {
             "jestConfig": "packages/react-chakra-ui-form-hook-generator/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "executor": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/react",
+            "port": 4400,
+            "config": {
+              "configFolder": "packages/react-chakra-ui-form-hook-generator/.storybook"
+            }
+          },
+          "configurations": { "ci": { "quiet": true } }
+        },
+        "build-storybook": {
+          "executor": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/react",
+            "outputPath": "dist/storybook/react-chakra-ui-form-hook-generator",
+            "config": {
+              "configFolder": "packages/react-chakra-ui-form-hook-generator/.storybook"
+            }
+          },
+          "configurations": { "ci": { "quiet": true } }
+        }
+      }
+    },
+    "react-chakra-ui-form-hook-generator-e2e": {
+      "root": "packages/react-chakra-ui-form-hook-generator-e2e",
+      "sourceRoot": "packages/react-chakra-ui-form-hook-generator-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "packages/react-chakra-ui-form-hook-generator-e2e/cypress.json",
+            "tsConfig": "packages/react-chakra-ui-form-hook-generator-e2e/tsconfig.e2e.json",
+            "devServerTarget": "react-chakra-ui-form-hook-generator:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "react-chakra-ui-form-hook-generator:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "packages/react-chakra-ui-form-hook-generator-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "react-chakra-ui-datepicker-e2e": {
+      "root": "packages/react-chakra-ui-datepicker-e2e",
+      "sourceRoot": "packages/react-chakra-ui-datepicker-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "packages/react-chakra-ui-datepicker-e2e/cypress.json",
+            "tsConfig": "packages/react-chakra-ui-datepicker-e2e/tsconfig.e2e.json",
+            "devServerTarget": "react-chakra-ui-datepicker:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "react-chakra-ui-datepicker:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "packages/react-chakra-ui-datepicker-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }

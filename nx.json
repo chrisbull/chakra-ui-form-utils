@@ -22,6 +22,14 @@
     },
     "react-chakra-ui-form-hook-generator": {
       "tags": ["chakra-ui", "react-hook-form", "react forms"]
+    },
+    "react-chakra-ui-form-hook-generator-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-chakra-ui-form-hook-generator"]
+    },
+    "react-chakra-ui-datepicker-e2e": {
+      "tags": [],
+      "implicitDependencies": ["react-chakra-ui-datepicker"]
     }
   },
   "workspaceLayout": { "appsDir": "packages", "libsDir": "packages" }

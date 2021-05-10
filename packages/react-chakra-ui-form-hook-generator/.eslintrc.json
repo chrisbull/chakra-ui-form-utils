@@ -6,7 +6,8 @@
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "parserOptions": {
         "project": [
-          "packages/react-chakra-ui-form-hook-generator/tsconfig.*?.json"
+          "packages/react-chakra-ui-form-hook-generator/tsconfig.*?.json",
+          "packages/react-chakra-ui-form-hook-generator/.storybook/tsconfig.json"
         ]
       },
       "rules": {}
